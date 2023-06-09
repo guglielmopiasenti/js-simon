@@ -12,9 +12,14 @@ Let the user enter the numbers via 5 input fields instead of via prompt.
 # Procedure
 
 1. I get the elements (timer and number display) from the DOM.
-2. I set the timer with a timing function
-3. I set the numbers with math random
-   3a. I create an array to store the numbers
-   3b. I generate 5 random numbers
-   3c. I check if the numbers are already in the array
-4. I connect the randomizer with a timing function so that it will disappear after 30 seconds
+2. I set the timer with a timing function.
+3. I set the numbers with math random.
+   3a. I create an array to store the numbers.
+   3b. I generate 5 random numbers.
+   3c. I check if the numbers are already in the array.
+   3d. I print the result.
+4. I create an event listener for the submit button.
+5. I create a function to check the user's guesses.
+6. I compare the user's guesses with the random numbers using a for loop.
+7. I get the result element from the dom.
+   7a. I display the result.
