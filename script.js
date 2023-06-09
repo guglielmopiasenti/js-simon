@@ -52,3 +52,10 @@ function checkGuesses() {
   const userGuesses = [guess1, guess2, guess3, guess4, guess5];
   const correctGuesses = [];
 }
+
+// Compare the user's guesses with the random numbers
+for (let i = 0; i < randomNumbers.length; i++) {
+  if (userGuesses.includes(randomNumbers[i])) {
+    correctGuesses.push(randomNumbers[i]);
+  }
+}
