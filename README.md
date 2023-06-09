@@ -9,8 +9,9 @@ After the 5 numbers have been entered, the software tells how many and which of 
 We show the 30 second countdown on the page
 Let the user enter the numbers via 5 input fields instead of via prompt.
 
-Tips of the day:
+# Procedure
 
-- Think first in Italian.
-- Divide the delivery into small problems.
-- Identify the elements you need to implement the program.
+1. I get the elements (timer and number display) from the DOM.
+2. I set the timer with a timing function
+3. I set the numbers with math random
+4. I connect the randomizer with a timing function so that it will disappear after 30 seconds
