@@ -13,6 +13,8 @@ const countdown = setInterval(() => {
   if (seconds === 0) {
     timerContainer.innerText = "Remember the numbers? Write 'em down!";
     clearInterval(countdown);
+    // hiding numbers
+    numbersContainer.innerText = "";
   }
 }, 1000);
 
@@ -28,6 +30,9 @@ while (randomNumbers.length < 5) {
   if (!randomNumbers.includes(randomNumber)) {
     randomNumbers.push(randomNumber);
   }
+
+  console.log(randomNumbers);
 }
 
+// printing numbers in the HTML
 numbersContainer.innerText = randomNumbers;
