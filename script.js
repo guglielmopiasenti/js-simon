@@ -17,10 +17,6 @@ const countdown = setInterval(() => {
     // hiding numbers
     numbersContainer.innerText = "";
   }
-
-  // Event listener for the submit button
-  const submitButton = document.getElementById("submit-guess");
-  submitButton.addEventListener("click");
 }, 1000);
 
 // Array to store the random numbers
@@ -51,11 +47,21 @@ function checkGuesses() {
 
   const userGuesses = [guess1, guess2, guess3, guess4, guess5];
   const correctGuesses = [];
+
+  // Compare the user's guesses with the random numbers
+  for (let i = 0; i < randomNumbers.length; i++) {
+    if (userGuesses.includes(randomNumbers[i])) {
+      correctGuesses.push(randomNumbers[i]);
+    }
+  }
+
+  // I get the element from the DOM
+  const resultContainer = document.getElementById("result-container");
+
+  // Display the result
+  resultContainer.innerText = "You found "(correctGuesses.length);
 }
 
-// Compare the user's guesses with the random numbers
-for (let i = 0; i < randomNumbers.length; i++) {
-  if (userGuesses.includes(randomNumbers[i])) {
-    correctGuesses.push(randomNumbers[i]);
-  }
-}
+// Event listener for the submit button
+const submitButton = document.getElementById("submit-guess");
+submitButton.addEventListener("click", checkGuesses);
