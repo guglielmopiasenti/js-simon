@@ -22,14 +22,16 @@
       <h1 id="timer-container"></h1>
       <h2 id="numbers-container" class="p-3 my-5"></h2>
       <div id="guess-container">
-        <input type="number" id="guess1" placeholder="Number 1" />
-        <input type="number" id="guess2" placeholder="Number 2" />
-        <input type="number" id="guess3" placeholder="Number 3" />
-        <input type="number" id="guess4" placeholder="Number 4" />
-        <input type="number" id="guess5" placeholder="Number 5" />
-        <button id="submit-guess" class="btn btn-primary">Submit</button>
+        <input type="number" id="guess1" placeholder="Number 1" disabled />
+        <input type="number" id="guess2" placeholder="Number 2" disabled />
+        <input type="number" id="guess3" placeholder="Number 3" disabled />
+        <input type="number" id="guess4" placeholder="Number 4" disabled />
+        <input type="number" id="guess5" placeholder="Number 5" disabled />
+        <button id="submit-guess" class="btn btn-primary" disabled>
+          Submit
+        </button>
       </div>
-      <div id="result-container"></div>
+      <h1 id="result-container"></h1>
     </div>
   </body>
 </html>

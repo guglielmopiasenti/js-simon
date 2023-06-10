@@ -16,6 +16,12 @@ const countdown = setInterval(() => {
     clearInterval(countdown);
     // hiding numbers
     numbersContainer.innerText = "";
+    guess1.disabled = false;
+    guess2.disabled = false;
+    guess3.disabled = false;
+    guess4.disabled = false;
+    guess5.disabled = false;
+    submitButton.disabled = false;
   }
 }, 1000);
 
@@ -35,7 +41,7 @@ while (randomNumbers.length < 5) {
   console.log(randomNumbers);
 }
 // printing numbers in the HTML
-numbersContainer.innerText = randomNumbers;
+numbersContainer.innerText = randomNumbers.join(" ");
 
 // Function to check the user's guesses
 function checkGuesses() {
@@ -59,7 +65,7 @@ function checkGuesses() {
   const resultContainer = document.getElementById("result-container");
 
   // Display the result
-  resultContainer.innerText = "You found "(correctGuesses.length);
+  resultContainer.innerText = "Your score is: " + correctGuesses.length;
 }
 
 // Event listener for the submit button
